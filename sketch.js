@@ -5,6 +5,7 @@ const g = new Image()
 const f = new Image()
 let a
 let dir
+let score
 
 //in order to load image, use new Image() to call constructor, then say object name.src = path
 g.src = 'ground.png'
@@ -65,10 +66,13 @@ function draw(){
         x: Math.floor(Math.random() * 17) * 32,
         y: Math.floor(Math.random() * 15) * 32
       }
+        score+=1
     }
     else{
       snake.pop()
     }
+    
+    document.writeln(score)
   
 }
 
